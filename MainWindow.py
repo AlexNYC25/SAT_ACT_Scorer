@@ -1,4 +1,5 @@
 from tkinter import *
+from SatWindow import *
 
 # TODO: fix layout of buttons to center them more in the center, assign function to button
 
@@ -15,7 +16,7 @@ class MainWindow():
         choice = Label(root, text="Which test do you need help scoring today")
         choice.pack(side="top")
 
-        satButton = Button(root, text="SAT", width="10", height="5", padx="5", command=create_window)
+        satButton = Button(root, text="SAT", width="10", height="5", padx="5", command=startSatWindow)
         actButton = Button(root, text="ACT", width="10", height="5", padx="5")
 
         satButton.pack(side="left")
@@ -32,3 +33,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def startSatWindow():
+    satWin = SatWindow()
+    satWin.mainloop()

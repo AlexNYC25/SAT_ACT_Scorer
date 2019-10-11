@@ -1,10 +1,13 @@
 import tkinter as tk
 
-class SatWindow():
+class SatWindow(tk.Tk):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super().__init__()
+        theTk = tk.Tk()
 
-        tk.Tk.__init__(self, *args, **kwargs)
-        container = tk.Frame(self)
+        self.Description = tk.Label(theTk, text='Enter your SAT info:')
+        self.Description.pack()
 
+        firstEntry = tk.Entry(theTk)
+        firstEntry.pack()
         
