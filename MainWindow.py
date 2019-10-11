@@ -15,12 +15,16 @@ class MainWindow():
         choice = Label(root, text="Which test do you need help scoring today")
         choice.pack(side="top")
 
-        satButton = Button(root, text="SAT", width="10", height="5", padx="5")
+        satButton = Button(root, text="SAT", width="10", height="5", padx="5", command=create_window)
         actButton = Button(root, text="ACT", width="10", height="5", padx="5")
 
         satButton.pack(side="left")
         actButton.pack(side="right")
         root.mainloop()
+
+    def create_window(self):
+        window = tk.Toplevel(root)
+
 
 
 def main():
